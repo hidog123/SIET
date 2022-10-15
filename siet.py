@@ -226,7 +226,7 @@ def change_tftp(mode, current_ip):  # Send package for changing tftp address
 
     elif mode == 'change_multi':
         if not os.path.isdir("tftp/conf") and not os.path.exists("tftp/conf"):
-            os.mkdir('tftp/conf', 0755);
+            os.mkdir('tftp/conf', 755);
         config_file = 'conf/' + current_ip + '.conf'
         fConf = 'tftp://' + my_ip + '/' + config_file
         sTime = '00:01'
